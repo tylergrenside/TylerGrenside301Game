@@ -29,35 +29,35 @@ namespace TylerGrenside301Game
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlGame = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pnlGame
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(458, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlGame.Location = new System.Drawing.Point(12, 6);
+            this.pnlGame.Name = "pnlGame";
+            this.pnlGame.Size = new System.Drawing.Size(840, 429);
+            this.pnlGame.TabIndex = 0;
+            this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1665, 255);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.pnlGame);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlGame;
     }
 }
 
