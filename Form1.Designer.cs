@@ -29,7 +29,9 @@ namespace TylerGrenside301Game
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
+            this.tmrSlime = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -41,6 +43,12 @@ namespace TylerGrenside301Game
             this.pnlGame.TabIndex = 0;
             this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
             // 
+            // tmrSlime
+            // 
+            this.tmrSlime.Enabled = true;
+            this.tmrSlime.Interval = 50;
+            this.tmrSlime.Tick += new System.EventHandler(this.tmrSlime_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -48,9 +56,12 @@ namespace TylerGrenside301Game
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
             this.Controls.Add(this.pnlGame);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -58,6 +69,7 @@ namespace TylerGrenside301Game
         #endregion
 
         private System.Windows.Forms.Panel pnlGame;
+        private System.Windows.Forms.Timer tmrSlime;
     }
 }
 
