@@ -13,8 +13,6 @@ namespace TylerGrenside301Game
     {
         public int x, y, width, height;//variables for the rectangle
         public Image slime;//variable for the spaceship's image
-       
-
         public Rectangle slimeRec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
@@ -33,43 +31,44 @@ namespace TylerGrenside301Game
             g.DrawImage(slime, slimeRec);
         }
 
-      
+
         public void MoveSlime(string move)
         {
             slimeRec.Location = new Point(x, y);
 
-            if (move == "right")
-            {
-                if (slimeRec.Location.X > 450) // is spaceship within 50 of right side
-                {
-
+             if (move == "right")
+             {
+               
+                 if (slimeRec.Location.X > 450) // is slime within 50 of right side
+                 {
+                    //MessageBox.Show("beepbeep");
                     x = 450;
-                    slimeRec.Location = new Point(x, y);
-                }
-                else
-                {
-                    x += 5;
-                    slimeRec.Location = new Point(x, y);
-                }
+                     slimeRec.Location = new Point(x, y);
+                 }
+                 else
+                 {
+                     x += 5;
+                     slimeRec.Location = new Point(x, y);
+                 }
 
-            }
+             }
 
 
-            if (move == "left")
-            {
-                if (slimeRec.Location.X < 10) // is spaceship within 10 of left side
-                {
+             if (move == "left")
+             {
+                 if (slimeRec.Location.X < 10) // is slime within 10 of left side
+                 {
 
-                    x = 10;
-                    slimeRec.Location = new Point(x, y);
-                }
-                else
-                {
-                    x -= 5;
-                    slimeRec.Location = new Point(x, y);
-                }
+                     x = 10;
+                     slimeRec.Location = new Point(x, y);
+                 }
+                 else
+                 {
+                     x -= 5;
+                     slimeRec.Location = new Point(x, y);
+                 }
 
-            }
+             }
 
 
 
@@ -77,4 +76,5 @@ namespace TylerGrenside301Game
 
     }
 }
+  
 

@@ -32,22 +32,33 @@ namespace TylerGrenside301Game
             this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrSlime = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pnlGame
             // 
             this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pnlGame.Location = new System.Drawing.Point(12, 6);
+            this.pnlGame.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pnlGame.Location = new System.Drawing.Point(120, 22);
             this.pnlGame.Name = "pnlGame";
-            this.pnlGame.Size = new System.Drawing.Size(840, 429);
+            this.pnlGame.Size = new System.Drawing.Size(500, 400);
             this.pnlGame.TabIndex = 0;
             this.pnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGame_Paint);
             // 
             // tmrSlime
             // 
-            this.tmrSlime.Enabled = true;
-            this.tmrSlime.Interval = 50;
+            this.tmrSlime.Interval = 1;
             this.tmrSlime.Tick += new System.EventHandler(this.tmrSlime_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(718, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -55,6 +66,7 @@ namespace TylerGrenside301Game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlGame);
             this.KeyPreview = true;
             this.Name = "Form1";
@@ -70,6 +82,7 @@ namespace TylerGrenside301Game
 
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrSlime;
+        private System.Windows.Forms.Button button1;
     }
 }
 
