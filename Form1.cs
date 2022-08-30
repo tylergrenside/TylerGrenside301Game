@@ -59,10 +59,7 @@ namespace TylerGrenside301Game
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("bing");
-        }
+      
 
         private void tmrSlime_Tick(object sender, EventArgs e)
         {

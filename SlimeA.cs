@@ -39,10 +39,10 @@ namespace TylerGrenside301Game
              if (move == "right")
              {
                
-                 if (slimeRec.Location.X > 450) // is slime within 50 of right side
+                 if (slimeRec.Location.X > 625) // is slime within 625 of right side
                  {
-                    //MessageBox.Show("beepbeep");
-                    x = 450;
+                  
+                    x = 630;
                      slimeRec.Location = new Point(x, y);
                  }
                  else
@@ -56,10 +56,10 @@ namespace TylerGrenside301Game
 
              if (move == "left")
              {
-                 if (slimeRec.Location.X < 10) // is slime within 10 of left side
+                 if (slimeRec.Location.X < 5) // is slime within 5 of left side
                  {
 
-                     x = 10;
+                     x = 0;
                      slimeRec.Location = new Point(x, y);
                  }
                  else
