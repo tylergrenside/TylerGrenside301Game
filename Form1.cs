@@ -19,6 +19,7 @@ namespace TylerGrenside301Game
     {
         Graphics g; //declare a graphics object called g
         Slime slime = new Slime();//create object called slime 
+        Lemon_Individual lemon = new Lemon_Individual();//create object called lemon
         bool left, right;
         string move;
 
@@ -41,6 +42,7 @@ namespace TylerGrenside301Game
         {
             g = e.Graphics;
             slime.drawSlime(g);
+            lemon.drawlemon(g);
             this.Invalidate();
 
         }
