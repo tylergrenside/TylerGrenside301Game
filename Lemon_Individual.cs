@@ -16,8 +16,8 @@ namespace TylerGrenside301Game
         //Create a constructor (initialises the values of the fields)
         public Lemon_Individual()
         {
-            x = 500;
-            y = 250;
+            x = 600;
+            y = 300;
             width = 80;
             height = 85;
             lemon = Properties.Resources.Lemon_Individual;

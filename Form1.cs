@@ -61,26 +61,31 @@ namespace TylerGrenside301Game
 
         }
 
-      
+
 
         private void tmrSlime_Tick(object sender, EventArgs e)
         {
             if (right) // if right arrow key pressed
             {
-                
+
                 move = "right";
                 slime.MoveSlime(move);
             }
             if (left) // if left arrow key pressed
             {
-                
+
                 move = "left";
                 slime.MoveSlime(move);
             }
 
             pnlGame.Invalidate();
-        }
+            if (slime.slimeRec.IntersectsWith(lemon[i].lemonRec))
+            {
+                //reset planet[i] back to top of panel
+                slime[i].x = 30; // set  y value of planetRec
+            }
 
-       
+        }
+   
     }
 }
