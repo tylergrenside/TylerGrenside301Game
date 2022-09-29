@@ -79,12 +79,15 @@ namespace TylerGrenside301Game
             }
 
             pnlGame.Invalidate();
-            if (slime.slimeRec.IntersectsWith(lemon[i].lemonRec))
+            for (int i =0; i<1; i++)
+            { 
+            if (slime.slimeRec.IntersectsWith(lemon.lemRec))
             {
                 //reset planet[i] back to top of panel
-                slime[i].x = 30; // set  y value of planetRec
+                slime.x -= 1; // set  y value of planetRec
+                    
             }
-
+            }
         }
    
     }

@@ -58,7 +58,6 @@ namespace TylerGrenside301Game
              {
                  if (slimeRec.Location.X < 5) // is slime within 5 of left side
                  {
-
                      x = 0;
                      slimeRec.Location = new Point(x, y);
                  }
