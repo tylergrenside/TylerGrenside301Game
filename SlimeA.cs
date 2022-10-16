@@ -69,7 +69,35 @@ namespace TylerGrenside301Game
 
              }
 
+            if (move == "up")
+            {
+                if (slimeRec.Location.Y < 5) // is slime within 5 of top side
+                {
+                    y = 5;
+                    slimeRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y -= 5;
+                    slimeRec.Location = new Point(x, y);
+                }
 
+            }
+
+            if (move == "down")
+            {
+                if (slimeRec.Location.Y < 5) // is slime within 5 of left side
+                {
+                    y = 0;
+                    slimeRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y += 5;
+                    slimeRec.Location = new Point(x, y);
+                }
+
+            }
 
         }
 

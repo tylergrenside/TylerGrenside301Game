@@ -20,7 +20,7 @@ namespace TylerGrenside301Game
         Graphics g; //declare a graphics object called g
         Slime slime = new Slime();//create object called slime 
         Lemon_Individual lemon = new Lemon_Individual();//create object called lemon
-        bool left, right;
+        bool left, right, up, down;
         string move;
 
         public Form1()
@@ -51,14 +51,16 @@ namespace TylerGrenside301Game
         {
             if (e.KeyData == Keys.A) { left = true; }
             if (e.KeyData == Keys.D) { right = true; }
-          
+            if (e.KeyData == Keys.W) { up = true; }
+            if (e.KeyData == Keys.S) { down = true; }
 
         }
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.A) { left = false; }
             if (e.KeyData == Keys.D) { right = false; }
-
+            if (e.KeyData == Keys.W) { up = false; }
+            if (e.KeyData == Keys.S) { down = false; }
         }
 
 
@@ -77,7 +79,18 @@ namespace TylerGrenside301Game
                 move = "left";
                 slime.MoveSlime(move);
             }
+            if (up) // if up arrow key pressed
+            {
 
+                move = "up";
+                slime.MoveSlime(move);
+            }
+            if (down) // if down arrow key pressed
+            {
+
+                move = "down";
+                slime.MoveSlime(move);
+            }
             pnlGame.Invalidate();
             for (int i =0; i<1; i++)
             { 
