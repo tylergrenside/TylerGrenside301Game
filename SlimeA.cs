@@ -71,9 +71,9 @@ namespace TylerGrenside301Game
 
             if (move == "up")
             {
-                if (slimeRec.Location.Y < 5) // is slime within 5 of top side
+                if (slimeRec.Location.Y < 0) // is slime within 5 of top side
                 {
-                    y = 5;
+                    y = -5;
                     slimeRec.Location = new Point(x, y);
                 }
                 else
@@ -83,12 +83,12 @@ namespace TylerGrenside301Game
                 }
 
             }
-
+          
             if (move == "down")
             {
-                if (slimeRec.Location.Y < 5) // is slime within 5 of left side
+                if (slimeRec.Location.Y > 350) // is slime within 5 of bottom side
                 {
-                    y = 0;
+                    y = 360;
                     slimeRec.Location = new Point(x, y);
                 }
                 else
@@ -103,5 +103,3 @@ namespace TylerGrenside301Game
 
     }
 }
-  
-

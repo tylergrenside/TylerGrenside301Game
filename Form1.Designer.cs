@@ -32,6 +32,8 @@ namespace TylerGrenside301Game
             this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrSlime = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -49,12 +51,30 @@ namespace TylerGrenside301Game
             this.tmrSlime.Interval = 1;
             this.tmrSlime.Tick += new System.EventHandler(this.tmrSlime_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(935, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Highscores";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(788, 157);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1013, 447);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlGame);
             this.KeyPreview = true;
             this.Name = "Form1";
@@ -63,6 +83,7 @@ namespace TylerGrenside301Game
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,6 +91,8 @@ namespace TylerGrenside301Game
 
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrSlime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
