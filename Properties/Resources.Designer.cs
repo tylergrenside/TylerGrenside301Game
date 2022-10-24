@@ -83,6 +83,16 @@ namespace TylerGrenside301Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dru {
+            get {
+                object obj = ResourceManager.GetObject("Dru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lemon_Individual {
             get {
                 object obj = ResourceManager.GetObject("Lemon_Individual", resourceCulture);
