@@ -19,13 +19,19 @@ namespace TylerGrenside301Game
     {
         Graphics g; //declare a graphics object called g
         Slime slime = new Slime();//create object called slime 
-        Dru dru = new Dru();//create object called Dru
+        List<Dru> dru = new List <Dru>();
         bool left, right, up, down;
         string move;
 
         public Form1()
         {
             InitializeComponent();
+            for (int i = 0; i < 7; i++)
+            {
+                int displacement = 10 + (i * 70);
+                dru.Add(new Dru(displacement));
+            }
+
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlGame, new object[] { true });
 
         }
@@ -40,9 +46,17 @@ namespace TylerGrenside301Game
 
         private void pnlGame_Paint(object sender, PaintEventArgs e)
         {
+
+            foreach (Dru p in dru)
+            {
+                p.DrawDru(g);//Draw the planet
+                p.moveDru(g);//move the planet
+            }
+
             g = e.Graphics;
+            
             slime.drawSlime(g);
-            dru.drawDru(g);
+            
             this.Invalidate();
 
         }
@@ -94,12 +108,7 @@ namespace TylerGrenside301Game
             pnlGame.Invalidate();
             for (int i =0; i<1; i++)
             { 
-            if (slime.slimeRec.IntersectsWith(lemon.lemRec))
-            {
-                //reset planet[i] back to top of panel
-                slime.x -= 1; // set  y value of planetRec
-                    
-            }
+            
             }
         }
    
